@@ -1,4 +1,4 @@
-module.exports = function(app){
+module.exports = function(app, express, fortune){
 	app.set('view engine', 'ejs');
 	app.use(express.static(__dirname + 'public'));
 	app.get('/', function(req, res, next){
