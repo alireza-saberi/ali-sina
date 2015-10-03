@@ -1,16 +1,17 @@
 {
   "name": "ali-sina",
   "version": "1.0.0",
-  "description": "",
+  "description": "Developong a talk between web and mobile apps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alireza-saberi/ali-sina.git"
   },
-  "author": "",
+  "author": "Alireza Saberi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alireza-saberi/ali-sina/issues"
