@@ -7,7 +7,13 @@ module.exports = function(app, express, fortune){
 	app.get('/about', function(req, res, next){
 		res.render('about');
 	});
+	app.get('/sina', function(req, res, next){
+		res.send('Hello Sina');
+	});
 
+	app.get('/fortune', function(req, res, next){
+		res.send(fortune.getFortune());
+	});
 	// catching 404 error
 	app.use(function(req, res, next){
 		res.status(404);
