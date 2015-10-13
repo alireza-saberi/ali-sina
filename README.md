@@ -4,7 +4,7 @@ Simple practice between Sina and I to connect his Android app with back-end expr
 ## Three apps are available for Sina to call:
 - sina : which responces back 'Hello Sina' to his mobile app request
 - fortune: which responces back with random fortune string to him; like a fotune cookie :sob:
-- database: which return some objects that I saved in Mongolab
+- database: which returns some objects that I saved in Mongolab
 
 ## Instructions
 - Install the Node modules to have dependencies in project directory.
