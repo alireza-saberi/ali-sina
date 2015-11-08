@@ -14,7 +14,9 @@ Simple practice between Sina and I to connect his Android app with back-end expr
 - Just send a AJAX request to `'/sina'` and `'/fortune'` with your mobile app
 - There is nothing really specific on web, really :imp: ,but you can bring it up if you want on browser by typing `localhost:3000`
 - Yes, server is on port number `3000`
-results:
+
+**Results:**
+
 ![image1](docs/photo_2015-11-08_11-17-34.jpg)
 
 #### Step 2
