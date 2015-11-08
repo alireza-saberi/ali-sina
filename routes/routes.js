@@ -47,7 +47,7 @@ module.exports = function(app, express, db, fortune, bodyParser){
 			res.send('Right name man!');
 							}else
 			{
-				res.send("Yo! peace of shit! get away!");
+				res.send("Yo! piece of shit! get away!");
 			}
 	});
 
