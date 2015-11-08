@@ -1,6 +1,18 @@
-module.exports = function(app, express, db, fortune){
+module.exports = function(app, express, db, fortune, bodyParser){
+	users = [{
+		"name" : "Ali",
+		"email":"ali@mail.com",
+		"number":"111-111-1111"
+		},
+		{
+		"name" : "Sina",
+		"email":"sina@mail.com",
+		"number":"222-222-2222"
+		}];
+
 	app.set('view engine', 'ejs');
 	app.use(express.static(__dirname + 'public'));
+	
 	app.get('/', function(req, res, next){
 		res.render('index');
 	});
@@ -8,13 +20,25 @@ module.exports = function(app, express, db, fortune){
 		res.render('about');
 	});
 	app.get('/sina', function(req, res, next){
+		console.log("Server: I got a Sina App request");
 		res.send('Hello Sina');
 	});
 
 	app.get('/fortune', function(req, res, next){
+		console.log("Server: I got a fortune App request");
 		res.send(fortune.getFortune());
 	});
 
+	app.get('/getList', function(req, res, next){
+		console.log("Server: I got a getList App request");
+		res.json(users);
+	});
+
+	app.get('/getList:id', function(req, res, next){
+		var id = req.params.id;
+		console.log("Server: I got a getList App request for user with this id: ", id );
+		res.json(users[id]);
+	});
 	// app.get('/database', function(req, res, next){
 	// 	  db.candidateList.find(function (err, docs) {
  //    	  console.log(docs);

@@ -21,6 +21,7 @@
     "express": "^4.13.3"
   },
   "devDependencies": {
+    "body-parser": "^1.14.1",
     "chai": "^3.3.0",
     "ejs": "^2.3.4",
     "grunt": "^0.4.5",
