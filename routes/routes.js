@@ -50,6 +50,22 @@ module.exports = function(app, express, db, fortune, bodyParser){
 				res.send("Yo! peace of shit! get away!");
 			}
 	});
+
+	app.post('/add', function(req, res){
+		console.log("Server: I got add App request this shit: ", req.body);
+		users.push(req.body);
+		res.json(users);
+	});
+
+	app.delete('/delete:id', function(req, res){
+		var id = req.params.id;
+		console.log("Server: I got delete App request this shit: ", id);
+		users.splice(id, 1);
+		res.json(users);
+
+	});
+
+
 	// app.get('/database', function(req, res, next){
 	// 	  db.candidateList.find(function (err, docs) {
  //    	  console.log(docs);
