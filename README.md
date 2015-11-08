@@ -28,7 +28,7 @@ Simple practice between Sina and I to connect his Android app with back-end expr
 ![image1](docs/photo_2015-11-08_11-17-34.jpg)
 
 #### Step 2
-- After pulling this repo, once again, you have to type `npm install` to the latest dependencies
+- After pulling this repo, once again, you have to type `npm install` to get the latest dependencies
 - Run `server.js`
 
 
