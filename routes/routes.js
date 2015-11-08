@@ -15,12 +15,12 @@ module.exports = function(app, express, db, fortune){
 		res.send(fortune.getFortune());
 	});
 
-	app.get('/database', function(req, res, next){
-		  db.candidateList.find(function (err, docs) {
-    	  console.log(docs);
-          res.json(docs);
-  });
-	});
+	// app.get('/database', function(req, res, next){
+	// 	  db.candidateList.find(function (err, docs) {
+ //    	  console.log(docs);
+ //          res.json(docs);
+ //  });
+	// });
 
 	// catching 404 error
 	app.use(function(req, res, next){
