@@ -39,6 +39,17 @@ module.exports = function(app, express, db, fortune, bodyParser){
 		console.log("Server: I got a getList App request for user with this id: ", id );
 		res.json(users[id]);
 	});
+
+	app.get('/checker', function(req, res, next){
+		var name = req.body.name;
+		console.log("Server: I got a checker App request this user: ", name );
+		if (name == "Cyrus") {
+			res.send('Right name man!');
+							}else
+			{
+				res.send("Yo! peace of shit! get away!");
+			}
+	});
 	// app.get('/database', function(req, res, next){
 	// 	  db.candidateList.find(function (err, docs) {
  //    	  console.log(docs);
