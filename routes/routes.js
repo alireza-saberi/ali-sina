@@ -43,6 +43,7 @@ module.exports = function(app, express, db, fortune, bodyParser){
 	app.get('/checker', function(req, res, next){
 		var name = req.body.name;
 		console.log("Server: I got a checker app request this user: ", name );
+		console.log("Server: checking checker app ", req );
 		if (name == "Cyrus") {
 			res.send('Right name man!');
 							}else
