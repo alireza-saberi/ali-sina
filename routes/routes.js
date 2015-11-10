@@ -40,10 +40,10 @@ module.exports = function(app, express, db, fortune, bodyParser){
 		res.json(users[id]);
 	});
 
+// checker is designed to access to an object in the body of request
 	app.get('/checker', function(req, res, next){
 		var name = req.body.name;
 		console.log("Server: I got a checker app request this user: ", name );
-		console.log("Server: checking checker app ", req.query);
 		if (name == "Cyrus") {
 			res.send('Right name man!');
 							}else
@@ -51,6 +51,30 @@ module.exports = function(app, express, db, fortune, bodyParser){
 				res.send("Yo! piece of shit! get away!");
 			}
 	});
+
+// checker2 is designed to access to the query in the request
+	app.get('/checker2', function(req, res, next){
+		var name = req.query.name;
+		console.log("Server: I got a checker app request this user: ", name );
+		if (name == "Cyrus") {
+			res.send('Right name man!');
+							}else
+			{
+				res.send("Yo! piece of shit! get away!");
+			}
+	});
+
+// checker3 is designed to access an object in the body of request within post method
+	app.post('/checker3', function(req, res, next){
+		var name = req.body.name;
+		console.log("Server: I got a checker app request this user: ", name );
+		if (name == "Cyrus") {
+			res.send('Right name man!');
+							}else
+			{
+				res.send("Yo! piece of shit! get away!");
+			}
+	});	
 
 	app.post('/add', function(req, res){
 		console.log("Server: I got add app request this shit: ", req.body);
