@@ -1,7 +1,7 @@
 {
   "name": "ali-sina",
   "version": "1.0.0",
-  "description": "Developong a talk between web and mobile apps",
+  "description": "Developing a talk between web and mobile apps",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
