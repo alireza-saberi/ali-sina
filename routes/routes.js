@@ -10,12 +10,13 @@ module.exports = function(app, express, db, fortune, bodyParser){
 		"number":"222-222-2222"
 		}];
 	
-	app.get('/', function(req, res, next){
-		res.render('index');
-	});
-	app.get('/about', function(req, res, next){
-		res.render('about');
-	});
+	// app.get('/', function(req, res, next){
+	// 	res.render('index');
+	// });
+	// app.get('/about', function(req, res, next){
+	// 	res.render('about');
+	// });
+
 	app.get('/sina', function(req, res, next){
 		console.log("Server: I got a Sina app request");
 		res.send('Hello Sina');
@@ -104,17 +105,17 @@ module.exports = function(app, express, db, fortune, bodyParser){
 	// });
 
 	// catching 404 error
-	app.use(function(req, res, next){
-		res.status(404);
-		res.render('404');
-	});
+	 app.use(function(req, res, next){
+	 	res.status(404);
+	 	res.redurect('404.html');
+	 });
 
 	// catching 500 error
-	app.use(function(err, req, res, next){
-		console.log();
-		res.status(500);
-		res.render('500');
-	});	
+	// app.use(function(err, req, res, next){
+	// 	console.log();
+	// 	res.status(500);
+	// 	res.render('500');
+	// });	
 };
 
 
