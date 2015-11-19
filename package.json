@@ -22,12 +22,6 @@
   },
   "devDependencies": {
     "body-parser": "^1.14.1",
-    "chai": "^3.3.0",
-    "ejs": "^2.3.4",
-    "grunt": "^0.4.5",
-    "jshint": "^2.8.0",
-    "mocha": "^2.3.3",
-    "mongojs": "^1.4.1",
-    "zombie": "^4.1.0"
+    "mongojs": "^1.4.1"
   }
 }
