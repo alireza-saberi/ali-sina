@@ -9,9 +9,6 @@ module.exports = function(app, express, db, fortune, bodyParser){
 		"email":"sina@mail.com",
 		"number":"222-222-2222"
 		}];
-
-	app.set('view engine', 'ejs');
-	app.use(express.static(__dirname + 'public'));
 	
 	app.get('/', function(req, res, next){
 		res.render('index');
