@@ -21,6 +21,7 @@
     "express": "^4.13.3"
   },
   "devDependencies": {
+    "angular": "^1.4.7",
     "body-parser": "^1.14.1",
     "mongojs": "^1.4.1"
   }

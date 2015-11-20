@@ -1,4 +1,4 @@
-module.exports = function(app, express, db, fortune, bodyParser){
+module.exports = function(app, express, fortune, bodyParser){
 	users = [{
 		"name" : "Ali",
 		"email":"ali@mail.com",
@@ -9,13 +9,6 @@ module.exports = function(app, express, db, fortune, bodyParser){
 		"email":"sina@mail.com",
 		"number":"222-222-2222"
 		}];
-	
-	// app.get('/', function(req, res, next){
-	// 	res.render('index');
-	// });
-	// app.get('/about', function(req, res, next){
-	// 	res.render('about');
-	// });
 
 	app.get('/sina', function(req, res, next){
 		console.log("Server: I got a Sina app request");
@@ -39,8 +32,9 @@ module.exports = function(app, express, db, fortune, bodyParser){
 	});
 
 // checker is designed to access to an object in the body of request
-	app.get('/checker', function(req, res, next){
+	app.get('/checker/', function(req, res, next){
 		var name = req.body.name;
+		// console.log(req);
 		console.log("Server: I got a checker app request this user: ", name );
 		if (name == "Cyrus") {
 			res.send('Right name man!');
@@ -63,7 +57,7 @@ module.exports = function(app, express, db, fortune, bodyParser){
 	});
 
 // checker3 is designed to access an object in the body of request within post method
-	app.post('/checker3', function(req, res, next){
+	app.post('/checker3/', function(req, res, next){
 		var name = req.body.name;
 		console.log("Server: I got a checker app request this user: ", name );
 		if (name == "Cyrus") {
@@ -107,7 +101,7 @@ module.exports = function(app, express, db, fortune, bodyParser){
 	// catching 404 error
 	 app.use(function(req, res, next){
 	 	res.status(404);
-	 	res.redurect('404.html');
+	 	res.redirect('404.html');
 	 });
 
 	// catching 500 error
