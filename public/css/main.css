@@ -4,6 +4,20 @@
    Author's custom styles
    ========================================================================== */
 
+#help {
+	position: fixed;
+	bottom: 0;
+	right: 10px;
+	/*background-color: #ff471a;*/
+	height: 40px;
+}
+#help:hover {
+	position: fixed;
+	bottom: 0;
+	right: 10px;
+	/*background-color: #ff471a;*/
+	height: 100px;
+}
 
 
 
